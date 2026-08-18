@@ -1,7 +1,7 @@
 <h1 align="center">DeepSeek Harness Desktop (DSH Desktop)</h1>
 
 <p align="center">
-  <strong>An open-source DeepSeek Harness desktop client for Windows and macOS.</strong><br>
+  <strong>An open-source DeepSeek Harness desktop client for Windows, macOS, and Linux.</strong><br>
   One-click download, ready to use out of the box.<br>
   Everything is a plugin — the desktop itself is a plugin.
 </p>
@@ -18,7 +18,7 @@
   <a href="https://github.com/anywhere-labs/deepseek-harness-desktop"><img src="https://img.shields.io/github/stars/anywhere-labs/deepseek-harness-desktop?style=flat&amp;label=%E2%98%85&amp;color=08C" alt="GitHub stars"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-2EA44F?style=flat" alt="MIT License"></a>
   <a href="https://discord.gg/TJeGqKRNM"><img src="https://img.shields.io/badge/Discord-5865F2?style=flat&amp;logo=discord&amp;logoColor=white" alt="Join Discord"></a>
-  <img src="https://img.shields.io/badge/macOS%20%7C%20Windows-4493F8?style=flat-square" alt="Supported platforms: macOS and Windows">
+  <img src="https://img.shields.io/badge/macOS%20%7C%20Windows%20%7C%20Linux-4493F8?style=flat-square" alt="Supported platforms: macOS, Windows, and Linux">
 </p>
 
 <p align="center">
@@ -31,12 +31,13 @@ DSH Desktop packages the local Web UI, Host service, and plugin system from [Dee
 
 ## Download and install
 
-Current release installers support Windows x64 and Apple Silicon macOS. Ordinary users do not need to install Node.js, pnpm, or DSH separately.
+Current release installers support Windows x64, Apple Silicon macOS, and Linux x64. Ordinary users do not need to install Node.js, pnpm, or DSH separately.
 
 | Platform | Download | Installation |
 | --- | --- | --- |
 | Windows x64 | [Download installer](https://www.dshdesktop.cn/api/downloads/windows) | Run the NSIS installer and follow its prompts |
 | macOS Apple Silicon | [Download DMG](https://www.dshdesktop.cn/api/downloads/mac) | Open the DMG and drag DSH Desktop into Applications |
+| Linux x64 | [Download from GitHub Releases](https://github.com/anywhere-labs/deepseek-harness-desktop/releases/latest) | Choose deb, rpm, or AppImage; the AppImage needs `chmod +x` before running it directly |
 
 Installers and SHA-256 digests are also available from [GitHub Releases](https://github.com/anywhere-labs/deepseek-harness-desktop/releases/latest). The first launch creates the default `desktop` profile and starts the official DSH Web interface locally. See the [user guide](docs/user-guide.en.md) and [FAQ](docs/faq.en.md) for plugin commands, platform details, and troubleshooting.
 
@@ -116,7 +117,7 @@ The official project provides the core agent capabilities, plugin system, and We
 - Desktop application packaging
 - Starting, stopping, and recovering the local service
 - Desktop window and system tray integration
-- macOS and Windows installer builds and releases
+- macOS, Windows, and Linux installer builds and releases
 - An interface designed for desktop use
 
 If you prefer to run Harness from the command line or contribute to its core functionality, refer to the official repository first.

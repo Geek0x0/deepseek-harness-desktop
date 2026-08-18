@@ -1,7 +1,7 @@
 <h1 align="center">DeepSeek Harness Desktop（DSH Desktop）</h1>
 
 <p align="center">
-  <strong>面向 Windows 和 macOS 的开源 DeepSeek Harness 桌面客户端。</strong><br>
+  <strong>面向 Windows、macOS 和 Linux 的开源 DeepSeek Harness 桌面客户端。</strong><br>
   一键下载，开箱即用。<br>
   万物皆「插件」，桌面本身也是「插件」。
 </p>
@@ -18,7 +18,7 @@
   <a href="https://github.com/anywhere-labs/deepseek-harness-desktop"><img src="https://img.shields.io/github/stars/anywhere-labs/deepseek-harness-desktop?style=flat&amp;label=%E2%98%85&amp;color=08C" alt="GitHub stars"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-2EA44F?style=flat" alt="MIT License"></a>
   <a href="https://discord.gg/TJeGqKRNM"><img src="https://img.shields.io/badge/Discord-5865F2?style=flat&amp;logo=discord&amp;logoColor=white" alt="Join Discord"></a>
-  <img src="https://img.shields.io/badge/macOS%20%7C%20Windows-4493F8?style=flat-square" alt="Supported platforms: macOS and Windows">
+  <img src="https://img.shields.io/badge/macOS%20%7C%20Windows%20%7C%20Linux-4493F8?style=flat-square" alt="Supported platforms: macOS, Windows, and Linux">
 </p>
 
 <p align="center">
@@ -31,12 +31,13 @@ DSH Desktop 把 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harne
 
 ## 下载与安装
 
-当前正式安装包支持 Windows x64 和搭载 Apple 芯片的 macOS。普通用户不需要单独安装 Node.js、pnpm 或 DSH。
+当前正式安装包支持 Windows x64、搭载 Apple 芯片的 macOS，以及 Linux x64。普通用户不需要单独安装 Node.js、pnpm 或 DSH。
 
 | 平台 | 下载 | 安装方式 |
 | --- | --- | --- |
 | Windows x64 | [下载安装程序](https://www.dshdesktop.cn/api/downloads/windows) | 运行 NSIS 安装程序并按提示完成安装 |
 | macOS Apple Silicon | [下载 DMG](https://www.dshdesktop.cn/api/downloads/mac) | 打开 DMG，将 DSH Desktop 拖入 Applications |
+| Linux x64 | [从 GitHub Releases 下载](https://github.com/anywhere-labs/deepseek-harness-desktop/releases/latest) | 选择 deb、rpm 或 AppImage；AppImage 需 `chmod +x` 后直接运行 |
 
 也可以从 [GitHub Releases](https://github.com/anywhere-labs/deepseek-harness-desktop/releases/latest) 获取安装包和 SHA-256 摘要。首次启动会创建默认 `desktop` profile，并在本机启动官方 DSH Web 界面。详细步骤、插件命令和故障排查见[用户指南](docs/user-guide.md)与[常见问题](docs/faq.md)。
 
@@ -116,7 +117,7 @@ DSH Desktop 没有魔改上游源码，也不是一个固定写死的外壳。�
 - 桌面应用封装
 - 本地服务的启动、停止与恢复
 - 桌面窗口和系统托盘集成
-- macOS、Windows 安装包构建与发布
+- macOS、Windows、Linux 安装包构建与发布
 - 更适合桌面使用的界面体验
 
 如果你希望通过命令行运行 Harness，或者参与核心功能开发，请优先查看官方仓库。
