@@ -442,6 +442,10 @@ describe('published package surface', () => {
     )
     const macosJob = ciWorkflow.slice(
       ciWorkflow.indexOf('  desktop-macos:'),
+      ciWorkflow.indexOf('  desktop-linux:'),
+    )
+    const linuxJob = ciWorkflow.slice(
+      ciWorkflow.indexOf('  desktop-linux:'),
       ciWorkflow.indexOf('  upstream-command-windows:'),
     )
 
@@ -452,6 +456,11 @@ describe('published package surface', () => {
     expect(macosJob).toContain('- run: yarn workspace dsh-community-market check')
     expect(macosJob).toContain('- run: yarn dist:mac-smoke')
     expect(macosJob).not.toContain('yarn workspace dsh-plugin-desktop dist:mac-smoke')
+    expect(linuxJob).toContain('runs-on: ubuntu-24.04')
+    expect(linuxJob).not.toContain('runs-on: ubuntu-latest')
+    expect(linuxJob).toContain('- run: yarn dist:linux')
+    expect(linuxJob).not.toContain('yarn workspace dsh-plugin-desktop dist:linux')
+    expect(linuxJob).toContain('~/.cache/electron-builder')
   })
 
   it('keeps one fixed brand-blue tray source for generated native assets', () => {
